@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteAuthorComponent } from './quote-author/quote-author.component';
 import { VotesComponent } from './votes/votes.component';
-
 @NgModule({
   declarations: [
     AppComponent,
