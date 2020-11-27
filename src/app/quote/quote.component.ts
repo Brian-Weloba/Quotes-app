@@ -15,6 +15,10 @@ export class QuoteComponent implements OnInit {
     new Quote(4 , 'Show me a sane man and I will cure him for you.' ,'Carl Jung',0),
   ];
 
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
