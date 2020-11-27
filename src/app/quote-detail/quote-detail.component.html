@@ -1,4 +1,5 @@
 <div>
-    <p>{{ quote.author }}</p>
-    <app-votes [quote]='quote'></app-votes>
+    <p>Author: {{ quote.author }}</p>
+    <app-vote [quote]='quote'></app-vote>
+    <button (click)='deleteQuote(true)'>Delete Quote</button>
 </div>
