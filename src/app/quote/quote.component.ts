@@ -9,11 +9,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {id:1, quote:'In the fight between you and the world, back the world.', author:'Franz Kafka'},
-    {id:2 , quote:'He who has a why to live can bear almost any how.' ,author:'Friedrich Nietzsche' },
-    {id:3 , quote:'One day, in retrospect, the years of struggle will strike you as the most beautiful.' ,author:'Sigmund Freud' },
-    {id:34 , quote:'Show me a sane man and I will cure him for you.' ,author:'Carl Jung'},
-  ]
+    new Quote(1, 'In the fight between you and the world, back the world.', 'Franz Kafka',0),
+    new Quote(2 , 'He who has a why to live can bear almost any how.' ,'Friedrich Nietzsche',0 ),
+    new Quote(3 , 'One day, in retrospect, the years of struggle will strike you as the most beautiful.' ,'Sigmund Freud',0 ),
+    new Quote(4 , 'Show me a sane man and I will cure him for you.' ,'Carl Jung',0),
+  ];
 
   constructor() { }
 
