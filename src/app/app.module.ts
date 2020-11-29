@@ -8,6 +8,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { VotesComponent } from './votes/votes.component';
 import { HighlightDirective } from './highlight.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
