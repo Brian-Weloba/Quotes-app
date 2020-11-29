@@ -29,6 +29,13 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.vote = 0;
+    this.quotes.push(quote)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
