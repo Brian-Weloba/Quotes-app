@@ -1,3 +1,4 @@
+import { AlertService } from './../alert-service/alert.service';
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
 
@@ -8,6 +9,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
+  alertService: AlertService;
   quotes: Quote[] = [
     new Quote(1, 'In the fight between you and the world, back the world.', 'Franz Kafka', 0, 'Solomon'),
     new Quote(2, 'He who has a why to live can bear almost any how.', 'Friedrich Nietzsche', 0, 'Cindy'),
@@ -25,6 +27,7 @@ export class QuoteComponent implements OnInit {
 
       if (toDelete) {
         this.quotes.splice(index, 1);
+        this.alertService.alertMe('The quote has been deleted!')
       }
     }
   }
@@ -36,7 +39,11 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-  constructor() { }
+
+
+  constructor(alertService: AlertService) {
+    this.alertService = alertService;
+  }
 
   ngOnInit(): void {
   }
